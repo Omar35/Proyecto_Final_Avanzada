@@ -280,7 +280,7 @@
     <Content Include="Views\sucursals\Details.cshtml" />
     <Content Include="Views\sucursals\Edit.cshtml" />
     <Content Include="Views\sucursals\Index.cshtml" />
-    <Content Include="Views\Catelera\Index.cshtml" />
+    <Content Include="Views\Cartelera\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\MainLayout.cshtml" />
   </ItemGroup>

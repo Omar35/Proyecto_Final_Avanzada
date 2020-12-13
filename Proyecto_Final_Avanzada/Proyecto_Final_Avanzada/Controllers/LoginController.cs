@@ -49,7 +49,7 @@ namespace Proyecto_Final_Avanzada.Controllers
                                             FormsAuthentication.Encrypt(authTicket));
                 Response.Cookies.Add(cookie);
                 var name = User.Identity.Name; // line 4
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Cartelera");
             }
         }
 
