@@ -20,7 +20,7 @@ namespace Proyecto_Final_Avanzada.Models
             this.proyeccion = new HashSet<proyeccion>();
         }
     
-        public decimal pel_idPel { get; set; }
+        public int pel_idPel { get; set; }
         public string pel_nombre { get; set; }
         public string pel_clasificacion { get; set; }
         public string pel_idioma { get; set; }

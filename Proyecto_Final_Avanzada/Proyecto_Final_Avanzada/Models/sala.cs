@@ -21,10 +21,10 @@ namespace Proyecto_Final_Avanzada.Models
             this.reserva = new HashSet<reserva>();
         }
     
-        public decimal sal_idSala { get; set; }
+        public int sal_idSala { get; set; }
         public Nullable<decimal> sal_numeroSala { get; set; }
         public Nullable<decimal> sal_numeroAsientos { get; set; }
-        public Nullable<decimal> suc_idSucursal { get; set; }
+        public Nullable<int> suc_idSucursal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<funcion> funcion { get; set; }

@@ -22,7 +22,7 @@ namespace Proyecto_Final_Avanzada.Models
             this.reserva2 = new HashSet<reserva>();
         }
     
-        public decimal cl_idCliente { get; set; }
+        public int cl_idCliente { get; set; }
         public string cl_nombre { get; set; }
         public string cl_apellido1 { get; set; }
         public string cl_apellido2 { get; set; }

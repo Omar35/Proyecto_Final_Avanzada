@@ -27,42 +27,18 @@
 <body>
 
 
-
-
     @foreach (var item in Model)
     {
 
-<div class="peli">
-    <h2>@item.pel_nombre</h2>
-    <img src="../Images/Deadpool.jpeg" width="250" height="200" />
-    <p>@item.pel_detalle</p>
-    <p>@item.pel_clasificacion</p>
-    <a href="@Url.Action("Index", "Login")" class="btn btn-danger btn-lg">Comprar</a>
-</div>}
+    <div class="peli">
+        <h2>@item.pel_nombre</h2>
+        <img src="~/Images/logo.png" width="250" height="200" />
+        <p>@item.pel_detalle</p>
+        <p>@item.pel_clasificacion</p>
+        <a href="@Url.Action("Index", "Login")" class="btn btn-danger btn-lg">Comprar</a>
+    </div>}
 
-    <!-- <div class="peli">
-         <h2>DeadPool</h2>
-         <img src="../Images/Deadpool.jpeg" width="250" height="200" />
-         <p>Un exmercenario quien, tras haber sido sometido a un cruel experimento, adquiere el superpoder de sanar rápidamente y pretende vengarse del hombre que destrozó su vida..</p>
-         <p> Mayores de edad </p>
-         <a href="@Url.Action("Index", "Login")" class="btn btn-danger btn-lg">Comprar</a>
-     </div>
-
-     <div class="peli">
-         <h2>Spiderman</h2>
-         <img src="../Images/Spiderman.jpg" width="250" height="200" />
-         <p>Luego de sufrir la picadura de una araña genéticamente modificada, un estudiante de secundaria tímido y torpe adquiere increíbles capacidades como arácnido. Pronto comprenderá que su misión es utilizarlas para luchar contra el mal y defender a sus vecinos..</p>
-         <p>Toda la familia</p>
-         <a href="@Url.Action("Index", "Login")" class="btn btn-danger btn-lg">Comprar</a>
-     </div>
-
-     <div class="peli">
-         <h2>Jumanji 2</h2>
-         <img src="../Images/Jumanji2.jpg" width="250" height="200" />
-         <p>Las aventuras continúan en el fantástico mundo del juego Jumanji, donde nada es lo que parece. En esta ocasión, los jugadores vuelven al juego, pero sus personajes se han intercambiado entre sí, lo que ofrece un curioso plantel: los mismos héroes con distinta apariencia. Pero, ¿dónde está el resto de la gente?.</p>
-         <p>Toda la familia</p>
-         <a href="@Url.Action("Index", "Login")" class="btn btn-danger btn-lg">Comprar</a>
-     </div>-->
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </body>

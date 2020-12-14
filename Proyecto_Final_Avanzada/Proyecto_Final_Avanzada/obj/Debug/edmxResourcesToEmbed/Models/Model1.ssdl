@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="cl_idCliente" />
     </Key>
-    <Property Name="cl_idCliente" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="cl_idCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="cl_nombre" Type="varchar" MaxLength="20" />
     <Property Name="cl_apellido1" Type="varchar" MaxLength="20" />
     <Property Name="cl_apellido2" Type="varchar" MaxLength="20" />
@@ -14,16 +14,16 @@
     <Key>
       <PropertyRef Name="fun_idFuncion" />
     </Key>
-    <Property Name="fun_idFuncion" Type="numeric" Precision="9" Scale="0" Nullable="false" />
-    <Property Name="pro_idProyeccion" Type="numeric" Precision="9" Scale="0" />
-    <Property Name="sal_idSala" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="fun_idFuncion" Type="int" Nullable="false" />
+    <Property Name="pro_idProyeccion" Type="int" />
+    <Property Name="sal_idSala" Type="int" />
     <Property Name="fun_horario" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="pelicula">
     <Key>
       <PropertyRef Name="pel_idPel" />
     </Key>
-    <Property Name="pel_idPel" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="pel_idPel" Type="int" Nullable="false" />
     <Property Name="pel_nombre" Type="varchar" MaxLength="30" />
     <Property Name="pel_clasificacion" Type="varchar" MaxLength="20" />
     <Property Name="pel_idioma" Type="varchar" MaxLength="20" />
@@ -33,21 +33,21 @@
     <Key>
       <PropertyRef Name="pro_idProyeccion" />
     </Key>
-    <Property Name="pro_idProyeccion" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="pro_idProyeccion" Type="int" Nullable="false" />
     <Property Name="pro_horaInicio" Type="varchar" MaxLength="20" />
     <Property Name="pro_horaFin" Type="varchar" MaxLength="20" />
-    <Property Name="pel_idPeli" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="pel_idPeli" Type="int" />
   </EntityType>
   <EntityType Name="reserva">
     <Key>
       <PropertyRef Name="res_idReserva" />
     </Key>
-    <Property Name="res_idReserva" Type="numeric" Precision="9" Scale="0" Nullable="false" />
-    <Property Name="cl_idCliente" Type="numeric" Precision="9" Scale="0" />
-    <Property Name="pro_idProyeccion" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="res_idReserva" Type="int" Nullable="false" />
+    <Property Name="cl_idCliente" Type="int" />
+    <Property Name="pro_idProyeccion" Type="int" />
     <Property Name="res_boletos" Type="numeric" Precision="9" Scale="0" />
     <Property Name="res_costoTotal" Type="numeric" Precision="9" Scale="0" />
-    <Property Name="sal_idSala" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="sal_idSala" Type="int" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
@@ -60,16 +60,16 @@
     <Key>
       <PropertyRef Name="sal_idSala" />
     </Key>
-    <Property Name="sal_idSala" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="sal_idSala" Type="int" Nullable="false" />
     <Property Name="sal_numeroSala" Type="numeric" Precision="9" Scale="0" />
     <Property Name="sal_numeroAsientos" Type="numeric" Precision="3" Scale="0" />
-    <Property Name="suc_idSucursal" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="suc_idSucursal" Type="int" />
   </EntityType>
   <EntityType Name="sucursal">
     <Key>
       <PropertyRef Name="suc_idSucursal" />
     </Key>
-    <Property Name="suc_idSucursal" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="suc_idSucursal" Type="int" Nullable="false" />
     <Property Name="suc_nombre" Type="varchar" MaxLength="20" />
     <Property Name="suc_provincia" Type="varchar" MaxLength="20" />
     <Property Name="suc_telefono" Type="numeric" Precision="9" Scale="0" />

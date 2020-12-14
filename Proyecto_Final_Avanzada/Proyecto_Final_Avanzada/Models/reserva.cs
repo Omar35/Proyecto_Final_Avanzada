@@ -14,12 +14,12 @@ namespace Proyecto_Final_Avanzada.Models
     
     public partial class reserva
     {
-        public decimal res_idReserva { get; set; }
-        public Nullable<decimal> cl_idCliente { get; set; }
-        public Nullable<decimal> pro_idProyeccion { get; set; }
+        public int res_idReserva { get; set; }
+        public Nullable<int> cl_idCliente { get; set; }
+        public Nullable<int> pro_idProyeccion { get; set; }
         public Nullable<decimal> res_boletos { get; set; }
         public Nullable<decimal> res_costoTotal { get; set; }
-        public Nullable<decimal> sal_idSala { get; set; }
+        public Nullable<int> sal_idSala { get; set; }
     
         public virtual cliente cliente { get; set; }
         public virtual cliente cliente1 { get; set; }

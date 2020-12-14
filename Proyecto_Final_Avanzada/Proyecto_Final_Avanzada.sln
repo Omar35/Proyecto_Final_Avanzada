@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto_Final_Avanzada", "Proyecto_Final_Avanzada\Proyecto_Final_Avanzada.csproj", "{E335560A-6DCC-4AED-B00E-1FE0474C3B44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaBackend", "PruebaBackend\PruebaBackend.csproj", "{F758B94F-4A99-44FF-BD07-CA45160B4396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E335560A-6DCC-4AED-B00E-1FE0474C3B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E335560A-6DCC-4AED-B00E-1FE0474C3B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E335560A-6DCC-4AED-B00E-1FE0474C3B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F758B94F-4A99-44FF-BD07-CA45160B4396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F758B94F-4A99-44FF-BD07-CA45160B4396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F758B94F-4A99-44FF-BD07-CA45160B4396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F758B94F-4A99-44FF-BD07-CA45160B4396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

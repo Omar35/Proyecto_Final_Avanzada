@@ -1,66 +1,67 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿@model Proyecto_Final_Avanzada.Models.RegistroViewModel
 
-<h2>Index</h2>
 
-    <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 justify-content-center ">
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 justify-content-center ">
 
-            <form action="" class="form  " method="post">
-                <br>
+        <br>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <legend class="text-center header text-danger">Registro</legend>
 
-                <legend class="text-center header text-danger">Registro</legend>
+            <br>
+            <div>
+                @Html.EditorFor(model => model.cl_nombre, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nombre" } })
+                @Html.ValidationMessageFor(model => model.cl_nombre, "", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div>
+                @Html.EditorFor(model => model.cl_apellido1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Primer apellido" } })
+                @Html.ValidationMessageFor(model => model.cl_apellido1, "", new { @class = "text-danger" })
 
-                <br>
-                <div>
-                    <input hover id="txtnombre" name="nombre" type="text" placeholder="Nombre"
-                           class="form-control">
+            </div>
+            <br>
+            <div>
+                @Html.EditorFor(model => model.cl_apellido2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Segundo apellido" } })
+                @Html.ValidationMessageFor(model => model.cl_apellido2, "", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div>
+
+                @Html.EditorFor(model => model.cl_telefono, new { htmlAttributes = new { @class = "form-control", @placeholder = "Telefono" } })
+                @Html.ValidationMessageFor(model => model.cl_telefono, "", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div>
+                @Html.EditorFor(model => model.cl_usuario, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nombre de usuario" } })
+                @Html.ValidationMessageFor(model => model.cl_usuario, "", new { @class = "text-danger" })
+            </div>
+            <br>
+            <div>
+                @Html.EditorFor(model => model.cl_contrasena, new { htmlAttributes = new { @class = "form-control", @placeholder = "Contrasena" } })
+                @Html.ValidationMessageFor(model => model.cl_contrasena, "", new { @class = "text-danger" })
+            </div>
+            <br>
+
+            <br>
+
+            <br>
+
+
+
+            <div class="form-group justify-content-center">
+                <div class="col-md-12 text-center">
+                    <input type="submit" value="Create" class="btn btn-danger btn-lg" />
                 </div>
-                <br>
-                <div>
-                    <input id="txtApellido1" name="apellido1" type="text" placeholder="Primer apellido"
-                           class="form-control">
-                </div>
-                <br>
-                <div>
-                    <input hover id="txtApellido2" name="apellido2" type="text" placeholder="Segundo apellido"
-                           class="form-control">
-                </div>
-                <br>
-                <div>
-                    <input hover id="txtTelefono" name="telefono" type="number" placeholder="Telefono"
-                           class="form-control">
-                </div>
-                <br>
-                <div>
-                    <input hover id="txtCorreo" name="correo" type="text" placeholder="Correo"
-                           class="form-control">
-                </div>
-                <br>
-                <div>
-                    <input hover id="txtContrasena" name="contrasena" type="text" placeholder="Contraseña"
-                           class="form-control">
-                </div>
-                <br>
+            </div>
 
-                <br>
+        }
+
+    </div>
 
 
-
-                <div class="form-group justify-content-center">
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-danger btn-lg" name="btnRegistro">Registrar</button>
-                    </div>
-                </div>
-
-            </form>
+    <div class="col-4"></div>
 
 
-        </div>
-
-
-        <div class="col-4"></div>
-</>

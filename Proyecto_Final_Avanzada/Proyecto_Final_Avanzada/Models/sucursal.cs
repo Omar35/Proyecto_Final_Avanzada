@@ -20,7 +20,7 @@ namespace Proyecto_Final_Avanzada.Models
             this.sala = new HashSet<sala>();
         }
     
-        public decimal suc_idSucursal { get; set; }
+        public int suc_idSucursal { get; set; }
         public string suc_nombre { get; set; }
         public string suc_provincia { get; set; }
         public Nullable<decimal> suc_telefono { get; set; }

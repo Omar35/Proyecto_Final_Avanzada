@@ -14,9 +14,9 @@ namespace Proyecto_Final_Avanzada.Models
     
     public partial class funcion
     {
-        public decimal fun_idFuncion { get; set; }
-        public Nullable<decimal> pro_idProyeccion { get; set; }
-        public Nullable<decimal> sal_idSala { get; set; }
+        public int fun_idFuncion { get; set; }
+        public Nullable<int> pro_idProyeccion { get; set; }
+        public Nullable<int> sal_idSala { get; set; }
         public string fun_horario { get; set; }
     
         public virtual proyeccion proyeccion { get; set; }

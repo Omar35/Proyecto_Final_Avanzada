@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="cl_idCliente" />
     </Key>
-    <Property Name="cl_idCliente" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="cl_idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="cl_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="cl_apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="cl_apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -17,9 +17,9 @@
     <Key>
       <PropertyRef Name="fun_idFuncion" />
     </Key>
-    <Property Name="fun_idFuncion" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
-    <Property Name="pro_idProyeccion" Type="Decimal" Precision="9" Scale="0" />
-    <Property Name="sal_idSala" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="fun_idFuncion" Type="Int32" Nullable="false" />
+    <Property Name="pro_idProyeccion" Type="Int32" />
+    <Property Name="sal_idSala" Type="Int32" />
     <Property Name="fun_horario" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="proyeccion" Relationship="Self.FK__funcion__pro_idP__59063A47" FromRole="funcion" ToRole="proyeccion" />
     <NavigationProperty Name="sala" Relationship="Self.FK__funcion__sal_idS__5812160E" FromRole="funcion" ToRole="sala" />
@@ -28,7 +28,7 @@
     <Key>
       <PropertyRef Name="pel_idPel" />
     </Key>
-    <Property Name="pel_idPel" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="pel_idPel" Type="Int32" Nullable="false" />
     <Property Name="pel_nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="pel_clasificacion" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="pel_idioma" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -39,10 +39,10 @@
     <Key>
       <PropertyRef Name="pro_idProyeccion" />
     </Key>
-    <Property Name="pro_idProyeccion" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="pro_idProyeccion" Type="Int32" Nullable="false" />
     <Property Name="pro_horaInicio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="pro_horaFin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="pel_idPeli" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="pel_idPeli" Type="Int32" />
     <NavigationProperty Name="funcion" Relationship="Self.FK__funcion__pro_idP__59063A47" FromRole="proyeccion" ToRole="funcion" />
     <NavigationProperty Name="pelicula" Relationship="Self.FK__proyeccio__pel_i__5AEE82B9" FromRole="proyeccion" ToRole="pelicula" />
     <NavigationProperty Name="reserva" Relationship="Self.FK__reserva__pro_idP__59FA5E80" FromRole="proyeccion" ToRole="reserva" />
@@ -51,12 +51,12 @@
     <Key>
       <PropertyRef Name="res_idReserva" />
     </Key>
-    <Property Name="res_idReserva" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
-    <Property Name="cl_idCliente" Type="Decimal" Precision="9" Scale="0" />
-    <Property Name="pro_idProyeccion" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="res_idReserva" Type="Int32" Nullable="false" />
+    <Property Name="cl_idCliente" Type="Int32" />
+    <Property Name="pro_idProyeccion" Type="Int32" />
     <Property Name="res_boletos" Type="Decimal" Precision="9" Scale="0" />
     <Property Name="res_costoTotal" Type="Decimal" Precision="9" Scale="0" />
-    <Property Name="sal_idSala" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="sal_idSala" Type="Int32" />
     <NavigationProperty Name="cliente" Relationship="Self.FK__reserva__cl_idCl__5535A963" FromRole="reserva" ToRole="cliente" />
     <NavigationProperty Name="cliente1" Relationship="Self.FK__reserva__cl_idCl__5BE2A6F2" FromRole="reserva" ToRole="cliente" />
     <NavigationProperty Name="cliente2" Relationship="Self.FK__reserva__cl_idCl__5CD6CB2B" FromRole="reserva" ToRole="cliente" />
@@ -75,10 +75,10 @@
     <Key>
       <PropertyRef Name="sal_idSala" />
     </Key>
-    <Property Name="sal_idSala" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="sal_idSala" Type="Int32" Nullable="false" />
     <Property Name="sal_numeroSala" Type="Decimal" Precision="9" Scale="0" />
     <Property Name="sal_numeroAsientos" Type="Decimal" Precision="3" Scale="0" />
-    <Property Name="suc_idSucursal" Type="Decimal" Precision="9" Scale="0" />
+    <Property Name="suc_idSucursal" Type="Int32" />
     <NavigationProperty Name="funcion" Relationship="Self.FK__funcion__sal_idS__5812160E" FromRole="sala" ToRole="funcion" />
     <NavigationProperty Name="reserva" Relationship="Self.FK__reserva__sal_idS__5629CD9C" FromRole="sala" ToRole="reserva" />
     <NavigationProperty Name="sucursal" Relationship="Self.FK__sala__suc_idSucu__571DF1D5" FromRole="sala" ToRole="sucursal" />
@@ -87,7 +87,7 @@
     <Key>
       <PropertyRef Name="suc_idSucursal" />
     </Key>
-    <Property Name="suc_idSucursal" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="suc_idSucursal" Type="Int32" Nullable="false" />
     <Property Name="suc_nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="suc_provincia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="suc_telefono" Type="Decimal" Precision="9" Scale="0" />

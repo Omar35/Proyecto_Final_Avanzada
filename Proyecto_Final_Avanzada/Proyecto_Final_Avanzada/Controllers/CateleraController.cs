@@ -13,7 +13,7 @@ namespace Proyecto_Final_Avanzada.Controllers
 
         // GET: Cartelera
         public ActionResult Index()
-        {
+       {
             return View(db.pelicula.ToList());
         }
     }

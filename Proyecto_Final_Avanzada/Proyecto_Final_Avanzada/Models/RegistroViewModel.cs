@@ -6,10 +6,10 @@ using System.Web;
 
 namespace Proyecto_Final_Avanzada.Models
 {
-    public class Registro
+    public class RegistroViewModel
     {
+        [Key]
         [Required]
-        [StringLength(10)]
         [Display(Name = "ID Cliente")]
         public decimal cl_idCliente { get; set; }
         [Required]
@@ -25,15 +25,18 @@ namespace Proyecto_Final_Avanzada.Models
         [Display(Name = "Segundo Apellido")]
         public string cl_apellido2 { get; set; }
         [Required]
-        [StringLength(50)]
         [Display(Name = "Telefono")]
-        public Nullable<decimal> cl_telefono { get; set; }
+
+        public decimal cl_telefono { get; set; }
         [Required]
         [StringLength(50)]
+        [Display(Name = "Nombre de usuario")]
+        public string cl_usuario { get; set; }
+        [Required]
+        [MaxLength(30)]
+        [MinLength(4)]
         [Display(Name = "Contraseña")]
-        public string Password { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Registro> Registros { get; set; }
+        [DataType(DataType.Password)]
+        public string cl_contrasena { get; set; }
     }
 }
