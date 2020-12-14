@@ -1,5 +1,9 @@
-﻿<!doctype html>
-<html lang="en">
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Principal.cshtml";
+}
+
 
 <head>
     <!-- Required meta tags -->
@@ -28,7 +32,7 @@
     <div class="container-fluid fondo ">
         <div class="row  ">
             <div class="col-4"></div>
-            <div class="col-4 justify-content-center ">
+            <div class="col-4 justify-content-center">
 
                 <form action="" class="form  " method="post">
                     <br>
@@ -57,6 +61,11 @@
                     </div>
                     <br>
                     <div>
+                        <input hover id="txtTelefono" name="Tarjeta" type="number" placeholder="Cantidad de boletos"
+                               class="form-control">
+                    </div>
+                    <br>
+                    <div>
                         <input hover id="txtCorreo" name="correo" type="text" placeholder="Correo"
                                class="form-control">
                     </div>
@@ -73,8 +82,7 @@
 
                     <div class="form-group justify-content-center">
                         <div class="col-md-12 text-center">
-
-                            <a href="Exito.html" class="btn btn-danger">Comprar</a></a>
+                            <a href="@Url.Action("Index", "Exito")" class="btn btn-danger btn-lg">Comprar</a>
                         </div>
                     </div>
 
@@ -101,4 +109,3 @@
             crossorigin="anonymous"></script>
 </body>
 
-</html>
